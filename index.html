@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Text shadow generator</title>
+    <title>Text-shadow Generator</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
@@ -12,25 +12,52 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <h1>Text shadow generator</h1>
+    <h1>Text-shadow Generator</h1>
     <div class="container">
       <div class="row">
         <div class="col-xl-4 col-md-6">
           <div class="card">
             <div class="card-header bg-primary">Настройки:</div>
-            <div class="card-body"></div>
+            <div class="card-body">
+
+              <label for="font_size">Размер шрифта</label>
+              <input type="range" min="9" max="40" step="1" value="40" class="custom-range" id="font_size">
+
+              <label for="offset_x">Смещение по оси x</label>
+              <input type="range" min="-15" max="15" step="1" value="4" class="custom-range" id="offset_x">
+
+              <label for="offset_y">Смещение по оси y</label>
+              <input type="range" min="-15" max="15" step="1" value="-1" class="custom-range" id="offset_y">
+
+              <label for="blur">Размер шрифта</label>
+              <input type="range" min="0" max="15" step="1" value="0" class="custom-range" id="blur">
+
+            </div>
           </div>
         </div>
         <div class="col-xl-4 col-md-6">
           <div class="card">
             <div class="card-header bg-primary">Цвет:</div>
-            <div class="card-body"></div>
+            <div class="card-body">
+
+              <input type="color" value="#ff0000">
+
+              <label for="opacity">Прозрачность</label>
+              <input type="range" min="0" max="1" step="0.01" value="1" class="custom-range" id="opacity">
+            
+            </div>
           </div>
         </div>
         <div class="col-xl-4 col-md-12">
           <div class="card">
             <div class="card-header bg-primary">Результат:</div>
-            <div class="card-body"></div>
+            <div class="card-body">
+              <label for="resultHex">Цвет в HEX</label>
+              <textarea id="resultHex" rows="4" readonly></textarea><br>
+
+              <label for="resultRgba">Цвет в RGBA</label>
+              <textarea id="resultHex" rows="3" readonly></textarea><br>              
+            </div>
           </div>
         </div>
       </div>
