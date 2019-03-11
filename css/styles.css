@@ -1,1 +1,54 @@
+body {
+	text-align: center;
+	background-color: #eeeeee;
+}
 
+label {
+	display: block;
+}
+
+h1 {
+	color: #000000;
+	font-size: 40px;
+	font-weight: bold;
+	letter-spacing: 6px;
+	text-transform: uppercase;
+	margin: 18px 0;
+}
+
+input[type="range"] {
+	width: 100%;
+}
+
+input[type="color"] {
+	border: none;
+	background-color: transparent;
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	margin-bottom: 15px;
+}
+
+input[type="color"]:hover {
+	cursor: pointer;
+}
+
+textarea {	
+	width: 100%;
+	resize: none;
+	max-width: 300px;
+	font-size: 13px; 
+}
+
+.card {
+	height: 100%;
+}
+
+.card-header {
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.row > div {
+	margin-bottom: 25px;
+}
