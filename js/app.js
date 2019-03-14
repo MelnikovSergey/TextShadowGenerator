@@ -22,3 +22,31 @@ cssShadow({
 	color: '#ff0000',
 	rgba: 'rgba(255, 0, 0, 1)'
 });
+
+$(document).on('input change', 'input', function(){
+	var font_size = $('#font_size').val();
+	var offset_x = $('#offset_x').val();
+	var offset_y = $('#offset_y').val();
+	var blur = $('#blur').val();
+	var opacity = $('#opacity').val();
+	var color = $('input[type="color"]').val()+'';
+	var red_16 = color[1] + ' ' + color[2];
+	var green_16 = color[3] + ' ' + color[4];
+	var blue_16 = color[5] + ' ' + color[6];
+	var red_10 = parseInt(red_16, 16);
+	var green_10 = parseInt(green_16, 16);
+	var blue_10 = parseInt(blue_16, 16)
+	var rgba = 'rgba(' + red_10 + ', ' + green_10 + ', ' + blue_10 + ', ' + opacity + ')';
+
+	$('h1').css('fontSize', font_size + 'px');
+
+	cssShadow({
+		font_size: font_size,
+		offset_x: offset_x,
+		offset_y: offset_y,
+		blur: blur,
+		opacity: opacity,
+		color: color,
+		rgba: rgba
+	});
+});
